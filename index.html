@@ -4,7 +4,33 @@
     <link href="main.css" rel = "stylesheet"/>
     </head>
     <body>
+        <h1>Bill Calculator</h1>
+
+        <form>
+            <p id=question>How Much Was Your Bill?</p>
+
+            £ <input id=billTotal placeholder="Total Cost">
+
+            <p id=question>How Was The Service?</p>
+
+            <select id=servQual>
+                <option value="=0.3">Outstanding</option>
+                <option value="0.2">Good</option>
+                <option value="0.1">Average</option>
+                <option value ="0.05">Below Average</option>
+                <option value ="0">Bad/No Tip</option>
+            </select>
+        </form>
+
+        <p>How Many People Are Splitting The Bill?</p>
+            <input id=people placeholder="No. Of People"> People
+
+        <button id=calculate>Calculate</button>
+
+        <p>Each Person Owes
+            <div id=each>£</div>
+        </p>
        
-        <script></script>
+        <script src = main.js></script>
     </body>
 </html>
