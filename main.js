@@ -1,17 +1,14 @@
-let total = document.querySelector("billTotal");
-    let service = document.querySelector("servQual");
-    let noPeople = document.querySelector("people");
+let totalCost = document.querySelector("#billTotal").innerText;
+console.log(totalCost.innerText);
 
-function calcSplit (total,service,people){
-    return total*service/people
+let noPeople = document.querySelector("people");
+
+let button = document.querySelector("#calcBill");
+   
+function eachTotal(){
+    return totalCost / noPeople
+}
+
+document.createElement("h3"){
     
 }
-
-function tipTotal (total, service){
-    return total*service
-}
-        
-let calculate = document.querySelector("calcBill");
-
-
-  
