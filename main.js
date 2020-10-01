@@ -1,14 +1,18 @@
-let totalCost = document.querySelector("#billTotal").innerText;
-console.log(totalCost.innerText);
-
-let noPeople = document.querySelector("people");
-
+let totalCost = document.querySelector("#billTotal");
+let noPeople = document.querySelector("#people");
 let button = document.querySelector("#calcBill");
-   
-function eachTotal(){
-    return totalCost / noPeople
+let eachPay = eachTotal(totalCost, noPeople);
+
+button = addEventListener("click", giveResult)
+
+
+function eachTotal(totalCost, noPeople){
+    return totalCost/noPeople
 }
 
-document.createElement("h3"){
+ function giveResult(eachPay){
+    document.querySelector("#eachTotal").innerText = eachPay
+ }
+
+
     
-}
