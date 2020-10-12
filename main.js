@@ -1,24 +1,25 @@
 
-let billTotal = document.querySelector("#bill-total").innerHTML
+let billTotal = document.querySelector("#bill-total")
 let noPeople = document.querySelector("#no-people")
 let tipPerc = document.querySelector("#tip-percent")
-let tipTotalSum = document.querySelector("#tip-total")
 let grandTotal = document.querySelector("#grand-total")
 let eachOwes = document.querySelector("#each-owes")
+let tipTotal = document.querySelector("#tip-total")
 
-function calcTip(){
-    let tipTotal = tipPerc/100 * billTotal
-    tipTotalSum.innerText = (`${tipTotal}`)
-    console.log(tipTotal)
+
+
+function calcBill(){
+    let tipTotal = (tipPerc/100) * billTotal;
+    let grandTotal = billTotal + tipTotal;
+    let eachOwes = grandTotal / noPeople;
+tipTotal.innerText = (`£ ${tipTotal}`);
+grandTotal.innerText = (`£ ${grandTotal}`) 
+eachOwes.innerText = (`£ ${eachOwes}`)
+
 
 }
 
-/*function calculateBill(){
-grandTotal = billTotal + tipTotal
-
-}*/
 
 
-
-
-let button = document.querySelector("#calculate").addEventListener("click", calcTip);
+let button = document.querySelector("#calculate").addEventListener("click", calcBill);
+//let button = document.querySelector("#calculate").addEventListener("click", calcBill);
