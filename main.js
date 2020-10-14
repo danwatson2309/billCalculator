@@ -1,14 +1,14 @@
 
-billTotal = document.querySelector("#bill-total").innerText;
-noPeople = document.querySelector("#no-people").innerText;
-tipPerc = document.querySelector("#tip-percent").innerText;
+const billTotal = document.querySelector("#bill-total").innerHTML;
+const noPeople = document.querySelector("#no-people").innerHTML;
+const tipPerc = document.querySelector("#tip-percent").innerHTML;
 const tipTotal = tipPerc/100 * billTotal;
 const grandTotal = billTotal + tipTotal;
 const eachowes = grandTotal / noPeople;
 
-function calcTip(){
-    let tipTotal = (tipPerc/100) * billTotal;
-
+ function calcTip(tipPerc, billTotal){
+     let tipTotal = tipPerc/100 * billTotal;
+    console.log(tipTotal)
 }
 
 let button = document.querySelector("#calculate").addEventListener("click", calcTip)
