@@ -1,25 +1,17 @@
 
-let billTotal = document.querySelector("#bill-total")
-let noPeople = document.querySelector("#no-people")
-let tipPerc = document.querySelector("#tip-percent")
-let grandTotal = document.querySelector("#grand-total")
-let eachOwes = document.querySelector("#each-owes")
-let tipTotal = document.querySelector("#tip-total")
+billTotal = document.querySelector("#bill-total").innerText;
+noPeople = document.querySelector("#no-people").innerText;
+tipPerc = document.querySelector("#tip-percent").innerText;
+const tipTotal = tipPerc/100 * billTotal;
+const grandTotal = billTotal + tipTotal;
+const eachowes = grandTotal / noPeople;
 
-
-
-function calcBill(){
+function calcTip(){
     let tipTotal = (tipPerc/100) * billTotal;
-    let grandTotal = billTotal + tipTotal;
-    let eachOwes = grandTotal / noPeople;
-tipTotal.innerText = (`£ ${tipTotal}`);
-grandTotal.innerText = (`£ ${grandTotal}`) 
-eachOwes.innerText = (`£ ${eachOwes}`)
-
 
 }
 
-
-
-let button = document.querySelector("#calculate").addEventListener("click", calcBill);
-//let button = document.querySelector("#calculate").addEventListener("click", calcBill);
+let button = document.querySelector("#calculate").addEventListener("click", calcTip)
+document.querySelector("#each-owes").innerText = `£${eachowes}`;
+document.querySelector("#grand-total").innerText = `£${grandTotal}`;
+document.querySelector("#tip-total").innerText = `£${tipTotal}`;
