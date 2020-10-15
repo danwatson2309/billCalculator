@@ -1,6 +1,7 @@
-let billTotal = 350 //document.querySelector("#bill-total").innerHTML;
-let noPeople = 3 //document.querySelector("#no-people").innerHTML;
-let tipPerc = 10 //document.querySelector("#tip-percent").innerHTML;
+let button = document.querySelector("#calculate");
+let billTotal = document.querySelector("#billTotal");
+let noPeople = document.querySelector("#no-people");
+let tipPerc = document.querySelector("#tip-percent");
 
 
 let tipTotal = calcTip(tipPerc, billTotal) 
@@ -22,7 +23,7 @@ function totalEach(grandTotal, noPeople){
     return grandTotal / noPeople
 };
 
-let button = document.querySelector("#calculate").addEventListener("click", calcTip)
+button.addEventListener("click", calcTip)
 document.querySelector("#each-owes").innerText = `£${eachowess}`;
 document.querySelector("#grand-total").innerText = `£${grandTotal}`;
 document.querySelector("#tip-total").innerText = `£${tipTotal}`;
