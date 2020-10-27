@@ -1,7 +1,12 @@
 let button = document.querySelector("#calculate");
-let billTotal = 300 //document.querySelector("#billTotal").value;
-let noPeople = 3 //document.querySelector("#no-people").value;
-let tipPerc = 10 //document.querySelector("#tip-percent").value;
+
+const total = document.querySelector("#bill-total");
+const totalPeople = document.querySelector("#no-people");
+const totalTip = document.querySelector("#tip-percent");
+
+let billTotal = total.value;
+let noPeople = totalPeople.value;
+let tipPerc = totalTip.value;
 
 function calcTip(){
       return (tipPerc/100) * billTotal;
@@ -23,8 +28,6 @@ function displayTotal(totalCost){
     let grandDisplay = document.querySelector("#grand-total");
     grandDisplay.innerText = `£${grandTotal}`;
 }
-
-
 
 function totalEach(){
      return grandTotal / noPeople
