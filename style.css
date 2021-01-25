@@ -1,3 +1,22 @@
-#tip-total {
-  color: red;
+body {
+  background-image: linear-gradient(to bottom right, blue, purple);
+  font-family: sans-serif;
+  color: lightcyan;
+}
+
+#title {
+  text-align: center;
+  color: lightblue;
+}
+
+#input {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+#output {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }

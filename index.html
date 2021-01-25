@@ -1,39 +1,57 @@
 <!DOCTYPE html>
-<html>
-    <head>
+<html id="page">
+  <head>
     <title>Bill Calculator</title>
-    <link href="style.css" rel = "stylesheet"/>
-    </head>
-    <body>
-        <h1>Bill Calculator</h1>
-        <main>
-        <h3>Bill Total</h3>
-       £ <input type="number" id="bill-total" placeholder="0"/>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <h1 id="title">Bill Calculator</h1>
+    <main>
+      <form id="input">
+        <div>
+          <label class="form-input" for="bill-total">Bill Total £</label>
 
-        <h3>No. Of People</h3>
-        <input type="number" id="no-people" placeholder="0"/>
-        
-        <h3>Tip?</h3>
-        <input type="number" id="tip-percent" placeholder="0"/>%
-            <br>
-            <br>
-        <button id=calculate>Calculate</button>
+          <input
+            class="form-input"
+            type="number"
+            id="bill-total"
+            placeholder="0"
+          />
+        </div>
+        <div>
+          <label class="form-input" for="no-people">No. Of People</label>
+          <input
+            class="form-input"
+            type="number"
+            id="no-people"
+            placeholder="0"
+          />
+        </div>
+        <div>
+          <label class="form-input" for="tip-percent">Tip %</label>
+          <input
+            class="form-input"
+            type="number"
+            id="tip-percent"
+            placeholder="0"
+          />
+        </div>
+      </form>
+      <br />
+      <button id="calculate">Calculate</button>
 
+      <form id="output">
         <h3>Tip Total</h3>
         <h4 id="tip-total"></h4>
 
         <h3>Grand Total (inc. Tip)</h3>
-        <h4  id="grand-total"></h4>
+        <h4 id="grand-total"></h4>
 
         <h3>Each Person Owes</h3>
         <h4 id="each-owes"></h4>
+      </form>
+    </main>
 
-        </main>
-
-        
-        
-       
-       
-        <script src = main.js></script>
-    </body>
+    <script src="main.js"></script>
+  </body>
 </html>
